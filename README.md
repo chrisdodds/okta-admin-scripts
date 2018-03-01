@@ -1,10 +1,12 @@
-# okta-admin-scripts  
-A growing collection of PowerShell scripts for Okta admins.
-  
-### get-oktaGroupMembers.ps1  
-**Description:** PowerShell script to export Okta group membership to a CSV file  
-**Example:** .\get-oktaGroupMembers.ps1 -org "tenant.okta.com" -gid "0000" -api_token "0000" -path "c:\scripts\file.csv"
-  
-### put-oktaGroupMembers.ps1
-**Description:** PowerShell script for adding a CSV file of user email addresses to an Okta group  
-**Example:** .\put-oktaGroupMembers.ps1 -org "tenant.okta.com" -gid "0000" -api_token"0000" -path "c:\scripts\file.csv"
+# Okta Powershell Scripts
+Based On Chris Neely's group management logic - https://github.com/chris-neely/okta-admin-scripts
+
+## User Lifecycle Management
+* **Example**: .\manageUsers.ps1 -org "tenant.okta.com" -api_token "0000" -action "activate" -send_email "true" -path "c:\data\users.csv"
+
+This support all user lifecycle actions including:
+* activate
+* deactivate
+* suspend
+* unsuspend
+* reactivate
